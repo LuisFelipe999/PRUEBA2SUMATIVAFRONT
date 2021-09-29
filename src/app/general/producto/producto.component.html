@@ -1,0 +1,106 @@
+<p>producto works!</p>  
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div *ngFor="let producto of productoService.productos" class="row-cols-md-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Peras y Manzanas" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555105c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Peras y Manzanas</text></svg>-->
+          <img src="{{producto.img}}" alt="UVA">
+          <div class="card-body">
+            <p class="card-text">{{producto.nombre}}</p> 
+            <p class="card-text">{{producto.precio}}</p> 
+              
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+               <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Oferta</button> -->
+                
+                <!--<button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button> -->
+              </div>
+              <small class="text-muted">10 Producto</small>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>   
+
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Peras y Manzanas" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555105c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Peras y Manzanas</text></svg>-->
+          
+          <div class="card-body">
+            <p class="card-text">Crimson</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="test" (click)="eliminarCrimson()">eliminar </button> 
+                <h3>{{variedad1}}</h3>
+                <h3>{{inventario1}}   </h3> 
+                <h3>U{{contador1}}</h3>   
+                <br>  
+                <br>  
+                <br>  
+                <br>
+                <button class="test" (click)="agregarCrimson()">agregar </button>
+                <h3>{{contador1*precio1}}</h3> 
+
+              </div>
+              <small class="test">10 Producto</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          
+          <div class="card-body">
+            <p class="card-text">Red Globe</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="test" (click)="eliminarRedglobe()">eliminar </button> 
+                <h3>{{variedad2}}</h3>
+                <h3>{{inventario2}}   </h3> 
+                <h3>U{{contador2}}</h3>   
+                <br>  
+                <br>  
+                <br>  
+                <br>
+                <button class="btn btn-primary" (click)="agregarRedglobe()">agregar </button>
+                <h3>{{contador2*precio2}}</h3> 
+
+              </div>
+              <small class="text-muted">10 Producto</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          
+
+          <div class="card-body">
+            <p class="card-text">Thompson</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="btn btn-primary" (click)="eliminarThompson()">eliminar </button> 
+                <h3>{{variedad3}}</h3>
+                <h3> {{inventario3}}   </h3> 
+                <h3>U{{contador3}}</h3> 
+                <br>  
+                <br>  
+                <br>  
+                <br>  
+                <button class="btn btn-primary" (click)="agregarThompson()">agregar </button>
+                <h3>{{contador3*precio3}}</h3>  
+              </div>
+              <small class="text-muted">10 Producto</small>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+
+      <h3>Total Carro de Compra {{(contador1*precio1)+(contador2*precio2)+(contador3*precio3)}}</h3>
+      

@@ -1,0 +1,6 @@
+<p>product works!</p>
+<div>{{product.name}}/<div><button>+</button>
+    <div>{{product.price}}/<div>
+<product *ngFor="let product of products" [product]="product">
+</product> 
+<div>{{product.name}}</div><button (click)="addProductToCart(product)">+</button>

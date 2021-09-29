@@ -1,0 +1,75 @@
+<p>prueba works!</p>
+<p>Fecha de hoy: {{Fecha}}</p>
+<p>Fecha de hoy: {{Fecha2}}</p> 
+<p>Fecha de hoy: {{Fecha3}}</p>
+<p>Mes Actual: {{Mes}}</p>
+<!--<p>Mes Actual Funcion: {{obtenerMes()}}</p> -->
+<p>Mes Actual get: {{mes}}</p> 
+<p>Dia Actual: {{dia}}</p>  
+
+
+<button class="btn btn-primary">Obtener Mes</button> 
+<button ng-click="obtenerMes()">Funcion</button> 
+<button class="btn btn-primary" (click)="obtenerDia()">Obtener DIA</button> 
+<h3>{{dia}}</h3> 
+<button class="btn btn-primary" (click)="obtenerDia()">eliminar</button> 
+<h3>{{dia}}</h3>
+<button class="btn btn-primary" (click)="sumar()">Sumar</button> 
+<h3>{{contador}}</h3>
+<button class="btn btn-primary" (click)="restar()">restar</button>  
+<h3>{{contador}}</h3>  
+<button class="btn btn-primary" (click)="agregarCarrito(id.getid(),valor.getvalor())">Sumar</button> 
+<h3>{{contador}}</h3>
+
+
+<!-- ngFor -->
+<ul>
+<li *ngFor="let dia of dias_semana; let i = index">
+{{i}}{{dia}}
+</li>
+</ul> 
+
+<button class="btn btn-primary" (click)="eliminar()">eliminar dia</button> 
+<h3>{{dia}}</h3>   
+<button class="btn btn-primary" (click)="agregar()">agregar dia</button>
+<h3>{{dia}}</h3>
+<!--<input type="text class" class="form-control"></input>
+<button class="btn btn-primary" (click)="agregar()">agregar</button>-->
+<form (ngSubmit)="insertar2($event)">
+    <button type="submit" class="btn btn-success">Confirm identity</button>
+<form (submit)="insertar">
+</form> 
+
+
+<form (ngSubmit) = "insertar()">
+    <h2></h2> 
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-success">Ingresar</button>
+</form>
+{{email}} {{password}}
+<br> 
+
+<form (ngSubmit) = "insertar()">
+    <h2></h2> 
+    <div class="mb-3">
+        <label for="id" class="form-label">id</label>
+        <input [(ngModel)]="id" name="email" type="id" class="form-control" id="id" aria-describedby="idHelp">
+        <div id="idHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+    </div>
+    <div class="mb-3">
+        <label for="valor" class="form-label">Password</label>
+        <input [(ngModel)]="valor" name="valor" type="valor" class="form-control" id="valor">
+    </div>
+    <button class="btn btn-primary" (click)="agregarCarrito(id.getid(),valor.getvalor())">obtener</button> 
+<h3>{{contador}}</h3>
+</form>
+{{id}} {{valor}}
+<br> 

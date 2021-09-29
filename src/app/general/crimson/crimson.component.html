@@ -1,0 +1,30 @@
+<p>crimson works!</p>
+<!DOCTYPE html>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Peras y Manzanas" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555105c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Peras y Manzanas</text></svg>-->
+        <img src="assets/img/UVA1.jpg" alt="peras">
+        <div class="card-body">
+          <p class="card-text">CRIMSON</p> 
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group"> 
+                    <ul>
+                    <li *ngFor="let uva of variedad; let i = index">
+                    {{i}}{{uva}}
+                    </li>
+                    </ul> 
+                <button class="btn btn-primary" (click)="eliminar()">eliminar </button> 
+                <h3>{{variedad}}</h3>
+                <h3>Inventario: {{inventario}}   </h3> 
+                <h3>Unidades Compradas{{contador}}</h3>   
+                
+                <button class="btn btn-primary" (click)="agregar()">agregar </button>
+                <h3>Total{{contador*precio}}</h3> 
+                
+            </div>
+            <small class="text-muted">10 Producto</small>
+          </div>
+        </div>
+      </div>
+    </div>

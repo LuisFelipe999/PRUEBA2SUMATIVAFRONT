@@ -1,0 +1,28 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "CRIMSON",
+        "descripcion": "CRIMSON SEEDLESS",
+        "precio": 2000,
+        "img": "assets/img/UVA1.jpg"
+        
+      },
+      {
+        "id": 2,
+        "nombre": "RED GLOBE",
+        "descripcion": "RED GLOBE SEEDLESS",
+        "precio": 2000,
+        "img": "assets/img/UVA2.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "THOMPSON",
+        "descripcion": "THOMPSON AMERICANA" ,
+        "precio": 2000, 
+        "img": "assets/img/UVA3.jpg"
+      }
+      
+      
+    ]
+  }
